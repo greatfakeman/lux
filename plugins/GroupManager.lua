@@ -3194,9 +3194,9 @@ if not matches[2] and not msg.reply_id then
 local function getpro(arg, data)
  if data.photos_[0] then
        if not lang then
-            tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,"Group Name : "..(check_markdown(msg.to.title)).."\nGroup ID : "..msg.to.id.."\nName : "..(check_markdown(msg.from.first_name or "----")).."\nUserName : @"..(check_markdown(msg.from.username or "----")).."\nUser ID : "..msg.from.id.."",dl_cb,nil)
+            tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,"Group Name : "..(check_markdown(msg.to.title)).."\nGroup ID : "..msg.to.id.."\nName : "..(check_markdown(msg.from.first_name or "----")).."\nUserName : @"..(msg.from.username or "").."\nUser ID : "..msg.from.id.."",dl_cb,nil)
        elseif lang then
-          tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,"نام گروه : "..(check_markdown(msg.to.title)).."\nشناسه گروه : "..msg.to.id.."\nنام شما : "..(check_markdown(msg.from.first_name or "----")).."\nنام کاربری : @"..(check_markdown(msg.from.username or "----")).."\nشناسه شما : "..msg.from.id.."",dl_cb,nil)
+          tdcli.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, data.photos_[0].sizes_[1].photo_.persistent_id_,"نام گروه : "..(check_markdown(msg.to.title)).."\nشناسه گروه : "..msg.to.id.."\nنام شما : "..(check_markdown(msg.from.first_name or "----")).."\nنام کاربری : @"..(msg.from.username or "").."\nشناسه شما : "..msg.from.id.."",dl_cb,nil)
      end
    else
        if not lang then
