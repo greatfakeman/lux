@@ -1,6 +1,6 @@
 ﻿
 local function run(msg, matches) 
-local monshi = id sudo
+local monshi = 368525804
 if matches[1] == "setpm" then 
 if not is_sudo(msg) then 
 return 'شما سودو نیستید' 
