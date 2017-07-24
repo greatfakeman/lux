@@ -1,5 +1,5 @@
 --Begin Tools.lua :)
-local SUDO = 377450049 -- put Your ID here! <===
+local SUDO = 272167798 -- put Your ID here! <===
 function exi_files(cpath)
     local files = {}
     local pth = cpath
@@ -178,9 +178,9 @@ local function warning(msg)
 	local d = math.floor(expiretime / 86400) + 1
         if tonumber(d) == 1 and not is_sudo(msg) and is_mod(msg) then
 			if lang then
-				tdcli.sendMessage(msg.to.id, 0, 1, 'از شارژ گروه 1 روز باقی مانده، برای شارژ مجدد با سودو ربات تماس بگیرید وگرنه با اتمام زمان شارژ، گروه از لیست ربات حذف وربات گروه را ترک خواهد کرد.', 1, 'md')
+				tdcli.sendMessage(msg.to.id, 0, 1, 'از شارژ گروه 1 روز باقی مانده، برای شارژ مجدد با سودو ربات تماس بگیرید وگرنه با اتمام زمان شارژ، گروه از لیست ربات حذف وربات گروه را ترک خواهد کرد@ GFAKEMbot یا  @ sudoX.', 1, 'md')
 			else
-				tdcli.sendMessage(msg.to.id, 0, 1, '_Group 1 day remaining charge, to recharge the robot contact with the sudo. With the completion of charging time, the group removed from the robot list and the robot will leave the group._', 1, 'md')
+				tdcli.sendMessage(msg.to.id, 0, 1, '_Group 1 day remaining charge, to recharge the robot contact with the sudo. With the completion of charging time, the group removed from the robot list and the robot will leave the group @ GFAKEMbot or  @ sudoX._', 1, 'md')
 			end
 		end
 	end
@@ -627,7 +627,7 @@ if is_sudo(msg) then
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Robot left from under group successfully:*\n\n`'..matches[2]..'`', 1,'md')
 			end
 		end
-		if (matches[1]:lower() == 'charge' or matches[1] == 'Charge' and matches[2] and matches[3]) then
+		if matches[1]:lower() == 'charge' and matches[2] and matches[3]or matches[1]:lower() == 'Charge' and matches[2] and matches[3] then
 		if string.match(matches[2], '^-%d+$') then
 			if tonumber(matches[3]) > 0 and tonumber(matches[3]) < 1001 then
 				local extime = (tonumber(matches[3]) * 86400)
@@ -1093,12 +1093,12 @@ matches[3] then
 		local send_file = 
 "./"..matches[2].."/"..matches[3]
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, send_file, '@MahDiRoO', dl_cb, nil)
+1, nil, send_file, '@FAKEbots', dl_cb, nil)
 	end
 	if matches[1]:lower() == "sendplug" and matches[2] or matches[1]:lower() == "Sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, plug, '@MahDiRoO', dl_cb, nil)
+1, nil, plug, '@FAKEbots', dl_cb, nil)
     end
   end
 
@@ -1158,8 +1158,8 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if matches[1] == 'matador' or matches[1] == 'Matador' then
-return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'md')
+if matches[1] == 'fakebot' or matches[1] == 'Fakebot' then
+return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
     end
 if matches[1] == 'adminlist' and is_admin(msg) or matches[1] == 'Adminlist' and is_admin(msg) then
 return adminlist(msg)
@@ -1276,4 +1276,4 @@ patterns = {
 }, 
 run = run, pre_process = pre_process
 }
--- #End By @MahDiRoO
+-- #End By @luxurybots
