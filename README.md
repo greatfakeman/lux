@@ -11,8 +11,8 @@ sudo apt-get update; sudo apt-get upgrade; sudo apt-get install tmux; sudo apt-g
 ```sh
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/MRMahDiRoO/MaTaDoR.git
-cd MaTaDoR
+git clone https://github.com/greatfakeman/lux.git
+cd lux
 chmod +x matador.sh
 chmod 777 auto.sh && sed -i -e 's/\r$//' auto.sh
 ./matador.sh install
