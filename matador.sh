@@ -39,10 +39,10 @@ function print_logo() {
 function logo_play() {
     declare -A txtlogo
     seconds="0.008"  
-txtlogo[1]=".-.   .-..-..-..-..-..-..---. .-..-. "
-txtlogo[2]="| |__ | || | >  < | || || |-<  >  /  "
-txtlogo[3]="`----'`----''-'`-``----'`-'`-' `-'   "
-txtlogo[4]="              @sudoX                 "                  
+txtlogo[1]=" .-.   .-..-..-..-..-..-..---. .-..-. "
+txtlogo[2]=" | |__ | || | >  < | || || |-<  >  /  "
+txtlogo[3]=" `----'`----''-'`-``----'`-'`-' `-'   "
+txtlogo[4]="               @sudoX                 "                  
     printf "\033[38;5;600m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
