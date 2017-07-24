@@ -1,4 +1,6 @@
-# [MahDiRoO](https://telegram.me/MahDiRoO)
+```
+sudo apt-get update; sudo apt-get upgrade; sudo apt-get install tmux; sudo apt-get install luarocks; sudo apt-get install screen; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev; sudo apt-get update; sudo apt-get install; sudo apt-get install upstart-sysv;
+```
 
 
 * * *
@@ -49,7 +51,6 @@ cd lux && screen ./auto.sh
 Open ./bot/bot.lua and add your ID to the "sudo_users" section in the following format:
 ```
     sudo_users = {
-    377450049,
     0,
     YourID
   }
