@@ -627,7 +627,7 @@ if is_sudo(msg) then
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Robot left from under group successfully:*\n\n`'..matches[2]..'`', 1,'md')
 			end
 		end
-		if matches[1]:lower() == 'charge' and matches[2] and matches[3]or matches[1]:lower() == 'Charge' and matches[2] and matches[3] then
+		if (matches[1]:lower() == 'charge' or matches[1] == 'Charge' and matches[2] and matches[3]) then
 		if string.match(matches[2], '^-%d+$') then
 			if tonumber(matches[3]) > 0 and tonumber(matches[3]) < 1001 then
 				local extime = (tonumber(matches[3]) * 86400)
@@ -1098,7 +1098,7 @@ matches[3] then
 	if matches[1]:lower() == "sendplug" and matches[2] or matches[1]:lower() == "Sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, plug, '@FAKEbots', dl_cb, nil)
+1, nil, plug, '@luxurybots', dl_cb, nil)
     end
   end
 
@@ -1158,8 +1158,8 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if matches[1] == 'fakebot' or matches[1] == 'Fakebot' then
-return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
+if matches[1] == 'luxury' or matches[1] == 'luxury' then
+return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'md')
     end
 if matches[1] == 'adminlist' and is_admin(msg) or matches[1] == 'Adminlist' and is_admin(msg) then
 return adminlist(msg)
