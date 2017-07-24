@@ -1,4 +1,4 @@
---Begin Msg-Checks.lua By @MahDiRoO
+--Begin Msg-Checks.lua By @sodoX
 local TIME_CHECK = 2
 local function pre_process(msg)
 local data = load_data(_config.moderation.data)
@@ -20,7 +20,7 @@ local muteallchk = 'muteall:'..msg.to.id
     if msg.text then
   if msg.text:match("(.*)") then
     if not data[tostring(msg.to.id)] and not redis:get(auto_leave) and not is_admin(msg) then
-  tdcli.sendMessage(msg.to.id, "", 0, "برای خرید ربات به آیدی زیر پیام دهید :\n@MahDiRoO", 0, "md")
+  tdcli.sendMessage(msg.to.id, "", 0, "برای خرید ربات به آیدی زیر پیام دهید :\n@sudoX", 0, "md")
   tdcli.changeChatMemberStatus(chat, our_id, 'Left', dl_cb, nil)
       end
    end
