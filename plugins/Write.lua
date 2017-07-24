@@ -1,4 +1,4 @@
-﻿--Begin Write.lua By @MahDiRoO
+﻿--Begin Write.lua By @sudoX
 function string:split(sep)
   local sep, fields = sep or ":", {}
   local pattern = string.format("([^%s]+)", sep)
