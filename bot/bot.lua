@@ -13,7 +13,7 @@ JSON = (loadfile "./libs/dkjson.lua")()
 local lgi = require ('lgi')
 local notify = lgi.require('Notify')
 notify.init ("Telegram updates")
---run_bash("~/BDReborn/clearcache.sh")
+--@sudoX
 chats = {}
 
 
@@ -91,23 +91,21 @@ function create_config( )
     "Msg-Checks",	
     "Plugins",
     "Tools",
+    "pv",
+    "addkick",
     "Write"
 	},
-    sudo_users = {377450049},
+    sudo_users = {272167798},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[⚜ *MaTaDoR BoT v5.4*
+    info_text = [[⚜ **luxurybots** ⚜
 
-🌐 https://github.com/MrMahDiRoO/MaTaDoR
-
-🔖 *Admins :*
-》@MahDiRoO ➣ _Founder & Developer《_
-
-》@ToOfan《
+🔖 *Admin :*
+》@sudoX
 
 📜 *Our channel :*
-》@MaTaDoRTeaM《]],
+》@luxurybots《]],
   }
 	serialize_to_file(config, './data/config.lua')
 	print ('saved config into conf.lua')
