@@ -257,7 +257,7 @@ local text = '*Ir Time:* _'..jdat.FAtime..'_\n*Ir Data:* _'..jdat.FAdate..'_\n--
 		return tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'html')
 	end
 --------------------------------
-	if matches[1]:lower() == "sticker" or matches[1]:lower() == "Sticker" or matches[1]:lower() == "استیکر" then 
+	if matches[1]:lower() == "sticker" or matches[1]:lower() == "Sticker" or matches[1]:lower() == "ااستیکر" then 
 		local eq = URL.escape(matches[2])
 		local w = "500"
 		local h = "500"
@@ -279,7 +279,7 @@ local text = '*Ir Time:* _'..jdat.FAtime..'_\n*Ir Data:* _'..jdat.FAdate..'_\n--
 		tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, '', dl_cb, nil)
 	end
 --------------------------------
-	if matches[1]:lower() == "photo" or  matches[1]:lower() == "Photo" or matches[1]:lower() == "عکس" then 
+	if matches[1]:lower() == "photo" or  matches[1]:lower() == "Photo" or matches[1]:lower() == "ععکس" then 
 		local eq = URL.escape(matches[2])
 		local w = "500"
 		local h = "500"
@@ -360,8 +360,8 @@ return {
 		"^(اذان)$",
 		"^(ترجمه) ([^%s]+) (.*)$",
 		"^(کوتاه) (.*)$",
-		"^(عکس) (.+)$",
-		"^(استیکر) (.+)$",
+		"^(ععکس) (.+)$",
+		"^(ااستیکر) (.+)$",
 		"^(من)$",
 		"^(test)$",
 		"^(پروفایل) (%d+)$",
