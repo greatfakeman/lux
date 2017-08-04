@@ -1,4 +1,4 @@
-﻿--Begin GroupManager.lua By @sudoX
+--Begin GroupManager.lua By @sudoX
 local function modadd(msg)
 local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
@@ -4159,7 +4159,7 @@ if not lang then
 
 if matches[1] == "help" and is_mod(msg) or matches[1] == "Help" and is_mod(msg) or matches[1] == "راهنما" and is_mod(msg) then
 if not lang then
-text = [[🔖**help luxurybots**
+text = [[🔖help **luxurybots**
 
 ⚡️*тo ѕee тнe coммαɴdѕ oғ yoυr deѕιred ιтeм ѕυвмιт*
 
@@ -4193,7 +4193,7 @@ _To Change The LanGuage_
 🎭 *ƇнαηηєƖ :* @luxurybots
 ]]
 elseif lang then
-text = [[🔖**help luxurybots**
+text = [[🔖 **help luxurybots**
 
 ⚡️*برای دیدن دستورات مورد نظر خود ، مورد دلخواه را ارسال کنید*
 
@@ -4238,7 +4238,7 @@ end
 
 if matches[1] == "sudohelp" and is_mod(msg) or  matches[1] == "Sudohelp" and is_mod(msg) or  matches[1] == "راهنمای سودو" and is_mod(msg) then
 text = [[
-🔖**help luxurybots***
+🔖help **luxurybots**
 
 ⚡️*тo ѕee тнe coммαɴdѕ oғ yoυr deѕιred ιтeм ѕυвмιт*
 
@@ -4555,19 +4555,19 @@ text = [[
 *تنظیم زبان* `[فارسی - انگلیسی]`
 ⚡️تنظیم زبان پاسخ گویی ربات به دستورات
 
-*خفه* `[username , id , reply]`
+*ساکت* `[username , id , reply]`
 💥ساکت کردن فرد (هر پیامی که فرد بدهد پاک میشود)
 
-*ان خفه* `[username , id , reply]`
+*رفع ساکت* `[username , id , reply]`
 ⚡️بازکردن ساکت بودن فرد 
 
 *اخراج* `[username , id , reply]`
 💥اخراج فرد از گروه
 
-*بن* `[username , id , reply]`
+*مسدود* `[username , id , reply]`
 ⚡️مسدود کردن فرد و اجازه ورود مجدد ندادن
 
-*ان بن * `[username , id , reply]`
+*رفع مسدود* `[username , id , reply]`
 💥خارج شدن فرد از حالت مسدود 
 
 *حذف پیام* `[username , id , reply]`
@@ -4748,10 +4748,10 @@ _ترجمه en سلام_
 *ویس* `[متن]`
 🔻تبدیل متن به صدا
 
-*ااستیکر* `[کلمه]`
+*استیکر* `[کلمه]`
 ⚜تبدیل متن به استیکر
 
-*ععکس* `[کلمه]`
+*عکس* `[کلمه]`
 🔻تبدیل متن به عکس
 
 *به استیکر* `[ریپلای]`
@@ -4804,7 +4804,7 @@ end
 
 if matches[1] == "ping" or matches[1] == "Ping" or matches[1] == "انلاینی" then
 text = [[
-اره لاکچریِ من💋
+اره انـلاینم و حـواسم بـہ گـروه هسـت
 ]]
 return text
 end
