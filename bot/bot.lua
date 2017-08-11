@@ -91,6 +91,7 @@ function create_config( )
     "Msg-Checks",	
     "Plugins",
     "Tools",
+    "CleanDeleted",
     "pv",
     "addkick",
     "Write"
